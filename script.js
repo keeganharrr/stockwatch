@@ -67,7 +67,7 @@ function createStockCard(stock) {
     card.innerHTML = `
         <div class="stock-header">
             <div class="stock-name">${stock.name}</div>
-            <div class="stock-ticker">Ticker: ${stock.ticker}</div>
+            <div class="stock-ticker">${stock.ticker}</div>
         </div>
         <div class="news-articles">
             <div class="loading">Loading news...</div>
