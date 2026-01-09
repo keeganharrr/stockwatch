@@ -21,4 +21,14 @@ A sleek, dark-themed stock news dashboard that displays real-time news for your 
 - SoundHound AI (SOUN)
 - Rocket Lab (RKLB)
 
-<!-- To add/remove stocks, edit the stocks array in script.js -->
+<!--
+## Add/Remove Stocks
+
+Edit the `stocks` array in `script.js`:
+
+```javascript
+const stocks = [
+    { name: 'Company Name', ticker: 'TICK', searchTerm: 'Company Name' },
+];
+```
+-->
