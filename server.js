@@ -23,7 +23,7 @@ app.get('/api/news', async (req, res) => {
         const params = new URLSearchParams({
             q: q,
             apiKey: NEWS_API_KEY,
-            pageSize: 3,
+            pageSize: 5,
             sortBy: 'publishedAt',
             language: 'en'
         });

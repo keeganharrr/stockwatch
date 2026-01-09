@@ -54,7 +54,14 @@ async function fetchNewsForStock(stock) {
     const data = await response.json();
 
     if (data.status === 'ok') {
-        return data.articles;
+        // Remove duplicates by title and limit to available articles
+        const seen = new Set();
+        const uniqueArticles = data.articles.filter(article => {
+            if (seen.has(article.title)) return false;
+            seen.add(article.title);
+            return true;
+        });
+        return uniqueArticles;
     } else {
         throw new Error(data.message || 'Failed to fetch news');
     }
